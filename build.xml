@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="com.mrk.wcf.loginNotification" default="build">
+	<target name="clean" description="Deletes old tar files.">
+		<delete failonerror="false">
+			<fileset dir="" includes="*.tar" />
+		</delete>
+
+		<delete failonerror="false" dir="build" />
+	</target>
+
+	<target name="prepare" depends="clean" description="Prepares the build.">
+		<mkdir dir="build" />
+	</target>
+
+	<target name="build" depends="prepare" description="Packs the tar files.">
+		<tar destfile="files.tar" basedir="files" />
+		<tar destfile="templates.tar" basedir="templates" />
+
+		<tar destfile="build/de.meetim.wcf.loginNotification.tar">
+			<tarfileset dir="">
+				<include name="*.sql" />
+				<include name="*.tar" />
+				<include name="*.tar.gz" />
+				<include name="*.xml" />
+				<exclude name="build.xml" />
+
+				<include name="language/**" />
+				<include name="optionals/**" />
+				<include name="requirements/**" />
+			</tarfileset>
+		</tar>
+	</target>
+</project>
