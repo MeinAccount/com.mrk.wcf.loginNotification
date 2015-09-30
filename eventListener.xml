@@ -1,0 +1,9 @@
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/eventListener.xsd">
+	<import>
+		<eventlistener>
+			<eventclassname>wcf\system\session\SessionHandler</eventclassname>
+			<eventname>afterChangeUser</eventname>
+			<listenerclassname>wcf\system\event\listener\LoginNotificationListener</listenerclassname>
+		</eventlistener>
+	</import>
+</data>

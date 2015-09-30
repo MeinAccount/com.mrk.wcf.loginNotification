@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="com.mrk.wcf.loginNotification" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/package.xsd">
+	<packageinformation>
+		<packagename><![CDATA[Login Notifications]]></packagename>
+		<packagename language="de"><![CDATA[Anmeldebenachrichtigungen]]></packagename>
+		<packagedescription><![CDATA[Shows notifications when an user you follow goes online.]]></packagedescription>
+		<packagedescription language="de"><![CDATA[Zeigt Benachrichtigungen, wenn ein gefolgter Benutzer online kommt.]]></packagedescription>
+		<version>1.0.0</version>
+		<date>2015-09-30</date>
+	</packageinformation>
+
+	<authorinformation>
+		<author>Magnus Kühn</author>
+	</authorinformation>
+
+	<requiredpackages>
+		<requiredpackage minversion="2.1.6">com.woltlab.wcf</requiredpackage>
+		<requiredpackage minversion="1.1.0">be.bastelstu.wcf.push</requiredpackage>
+	</requiredpackages>
+
+	<instructions type="install">
+		<instruction type="file">files.tar</instruction>
+		<instruction type="template">templates.tar</instruction>
+
+		<instruction type="eventListener">eventListener.xml</instruction>
+		<instruction type="language">language/*.xml</instruction>
+		<instruction type="templateListener">templateListener.xml</instruction>
+		<instruction type="userOption">userOption.xml</instruction>
+	</instructions>
+</package>
